@@ -12,10 +12,10 @@
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Sinchronicity/PassiveSkill_Operative_Sinchronicity.Default__PassiveSkill_Operative_Sinchronicity_C,AbilityDescription,0,,[skillbold]Kill Skill[/skillbold]. After killing an enemy, Zane gains increased [skillbold]Gun Damage[/skillbold] and [skillbold]Melee Damage[/skillbold] for a few seconds. This effect stacks five times.
 
 # Synchronicity/impact Stack 5x
-SparkPatchEntry,(1,2,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Sinchronicity/StatusEffect_Operative_Sinchronicity.StatusEffect_Operative_Sinchronicity,StackingStrategy,0,StatusEffectStackingStrategyData_Capped,/Game/GameData/StackingStrategy/StackingStrategy_Capped_5.StackingStrategy_Capped_5
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Sinchronicity/StatusEffect_Operative_Sinchronicity.StatusEffect_Operative_Sinchronicity,StackingStrategy,0,StatusEffectStackingStrategyData_Capped,/Game/GameData/StackingStrategy/StackingStrategy_Capped_5.StackingStrategy_Capped_5
 
 # change synchronisity to passive skill
-#SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/_Shared/_Design/Balance/Operative/DataTable_Operative_ConstantValues.DataTable_Operative_ConstantValues, ___ ,Value,0,,(BaseValueConstant=0.000000,DataTableValue=(DataTable=None,RowName="",ValueName=""),BaseValueAttribute=None,AttributeInitializer=None,BaseValueScale=2.000000)
+#SparkPatchEntry,(1,2,0,),/Game/PlayerCharacters/_Shared/_Design/Balance/Operative/DataTable_Operative_ConstantValues.DataTable_Operative_ConstantValues, ___ ,Value,0,,(BaseValueConstant=0.000000,DataTableValue=(DataTable=None,RowName="",ValueName=""),BaseValueAttribute=None,AttributeInitializer=None,BaseValueScale=2.000000)
 
 # Giving Synchronicity Melle damage instead
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Synchronicity/StatusEffect_Operative_Synchronicity.StatusEffect_Operative_Synchronicity,AttributeEffects.AttributeEffects[0].AttributeData,0,,/Game/GameData/Weapons/Att_MeleeDamageBonus.Att_MeleeDamageBonus
+SparkPatchEntry,(1,2,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Synchronicity/StatusEffect_Operative_Synchronicity.StatusEffect_Operative_Synchronicity,AttributeEffects.AttributeEffects[0].AttributeData,0,,/Game/GameData/Weapons/Att_MeleeDamageBonus.Att_MeleeDamageBonus
