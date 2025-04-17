@@ -9,7 +9,8 @@
 ###
 
 #change skill description
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Synchronicity/PassiveSkill_Operative_Synchronicity.Default__PassiveSkill_Operative_Synchronicity_C,AbilityDescription,0,,[skillbold]Kill Skill[/skillbold]. After killing an enemy, Zane gains increased [skillbold]Gun Damage[/skillbold] and [skillbold]Melee Damage[/skillbold] for a few seconds. This effect stacks five times.
+SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Synchronicity/PassiveSkill_Operative_Synchronicity.Default__PassiveSkill_Operative_Synchronicity_C,AbilityDescription,0,,[skillbold]Kill Skill[/skillbold]. Whenever Zane kills an enemy, he and his [actionskill]Digi-Clone[/actionskill] receive increased [skillbold]Gun Damage[/skillbold] and gain [skillbold]Melee Damage[/skillbold] for a few seconds. This effect stacks five times.
+
 
 # Synchronicity/impact Stack 5x
 SparkPatchEntry,(1,2,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Synchronicity/StatusEffect_Operative_Synchronicity.StatusEffect_Operative_Synchronicity,StackingStrategy,0,StatusEffectStackingStrategyData_Capped,/Game/GameData/StackingStrategy/StackingStrategy_Capped_5.StackingStrategy_Capped_5
@@ -19,3 +20,9 @@ SparkPatchEntry,(1,2,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passiv
 
 # Giving Synchronicity Melle damage instead
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Synchronicity/StatusEffect_Operative_Synchronicity.StatusEffect_Operative_Synchronicity,AttributeEffects.AttributeEffects[0].AttributeData,0,,/Game/GameData/Weapons/Att_MeleeDamageBonus.Att_MeleeDamageBonus
+
+
+
+
+
+
