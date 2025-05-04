@@ -91,10 +91,8 @@ When Zane summons his Digi-Clone, it is equipped with a copy of Zane's current w
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/GameData/StatusEffects/StatusEffect_Nova_Radiation.StatusEffect_Nova_Radiation,AttributeEffects,0,,(
     (AttributeData=/Game/GameData/Attributes/Shield/Att_NovaDamage,ModifierType=Override,
     BaseModifierValue=(BaseValueConstant=40000,DataTableValue=(DataTable=),BaseValueScale=1),
-    Mutator=OakPassiveAbilityAttributeEffectMutatorData'"/Game/GameData/StatusEffects/StatusEffect_Nova_Radiation.StatusEffect_Nova_Radiation:Mutator_OakPassiveAbilityAttributeEffectMutatorData"')
-)
+    Mutator=OakPassiveAbilityAttributeEffectMutatorData'"/Game/GameData/StatusEffects/StatusEffect_Nova_Radiation.StatusEffect_Nova_Radiation:Mutator_OakPassiveAbilityAttributeEffectMutatorData"'))
 
 # Trigger nova on action skill activation (Double Barrel)
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/DoubleBarrel/PassiveSkill_Operative_DoubleBarrel.PassiveSkill_Operative_DoubleBarrel_C,OnActionSkillActivatedEffects,0,,(
-    (EffectClass=/Game/GameData/StatusEffects/StatusEffect_Nova_Radiation.StatusEffect_Nova_Radiation_C)
-)
+    (EffectClass=/Game/GameData/StatusEffects/StatusEffect_Nova_Radiation.StatusEffect_Nova_Radiation_C))
