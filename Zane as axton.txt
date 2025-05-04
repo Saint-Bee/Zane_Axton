@@ -25,8 +25,7 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_
     (AttributeData=/Game/GameData/Attributes/DamageMultipliers/Att_DamageSourceInstigatorMultiplier_Melee,
      ModifierType=Scale,
      BaseModifierValue=(BaseValueConstant=0,DataTableValue=(DataTable=),BaseValueScale=1.5),
-     Mutator=OakPassiveAbilityAttributeEffectMutatorData'"/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/StatusEffect_Operative_Multitasker.StatusEffect_Operative_Multitasker:Mutator_OakPassiveAbilityAttributeEffectMutatorData"')
-)
+     Mutator=OakPassiveAbilityAttributeEffectMutatorData'"/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/StatusEffect_Operative_Multitasker.StatusEffect_Operative_Multitasker:Mutator_OakPassiveAbilityAttributeEffectMutatorData"'))
 
 # Add flashy electric FX to MultiTasker buff
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/StatusEffect_Operative_Multitasker.StatusEffect_Operative_Multitasker,EffectData.EffectBlueprint.EffectData,0,,(
@@ -35,8 +34,7 @@ SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passiv
     EffectType=Looping,
     bIsLooping=True,
     AttachPointName=Root,
-    bAttachToOwner=True
-)
+    bAttachToOwner=True)
 
 
 # Change skill description - Praemunitus
@@ -59,8 +57,7 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_
     (AttributeData=/Game/GameData/Attributes/Character/Att_MagazineSize,
      ModifierType=Scale,
      BaseModifierValue=(BaseValueConstant=0,DataTableValue=(DataTable=),BaseValueScale=0.3),  # 30% Magazine Size per active skill
-     Mutator=OakPassiveAbilityAttributeEffectMutatorData'"/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Praemunitus/StatusEffect_Operative_Praemunitus.StatusEffect_Operative_Praemunitus:Mutator_OakPassiveAbilityAttributeEffectMutatorData"')
-)
+     Mutator=OakPassiveAbilityAttributeEffectMutatorData'"/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Praemunitus/StatusEffect_Operative_Praemunitus.StatusEffect_Operative_Praemunitus:Mutator_OakPassiveAbilityAttributeEffectMutatorData"'))
 
 # Change skill description - Borrowed Time
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/BorrowedTime/PassiveSkill_Operative_BorrowedTime.Default__PassiveSkill_Operative_BorrowedTime_C,AbilityDescription.string,0,,
