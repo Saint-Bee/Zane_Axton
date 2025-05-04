@@ -1,74 +1,80 @@
-### Name: Zane to Axton
+### Name: Zane to Axton - Combat Focus
 ### Author: Saint-Bee
 ### Categories: skill-system, char-operative
 ### License: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
-### License URL: https://creativecommons.org/licenses/by-sa/4.0/
-###
-### Converts Zane's orange tree to a more Axton-style combat focus.
-###
+### Description: Overhauls Zane's orange tree with Axton-inspired combat bonuses
 
 # --- MULTITASKER ---
 
-# Updated description
+# Updated description with proper formatting
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/PassiveSkill_Operative_Multitasker.Default__PassiveSkill_Operative_Multitasker_C,AbilityDescription,0,,
-"Whenever one or more of Zane's action skills are active, he gains +[skillbold]15% Gun Damage[/skillbold], +[skillbold]15% Melee Damage[/skillbold], and [skillbold]5% Action Skill Cooldown Rate[/skillbold] per stack. Max 5 stacks."
+"Whenever one or more of Zane's action skills are active, he gains +<font color=\"#F7D358\">15% Gun Damage</font>, +<font color=\"#F7D358\">15% Melee Damage</font>, and <font color=\"#F7D358\">5% Action Skill Cooldown Rate</font> per stack. Max 5 stacks."
 
-# Stacking and effects
+# Stacking strategy with proper syntax
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/StatusEffect_Operative_Multitasker.StatusEffect_Operative_Multitasker,StackingStrategy,0,,
 "StatusEffectStackingStrategyData_Capped'/Game/GameData/StackingStrategy/StackingStrategy_Capped_5.StackingStrategy_Capped_5'"
 
+# Corrected attribute effects
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/StatusEffect_Operative_Multitasker.StatusEffect_Operative_Multitasker,AttributeEffects,0,,
 "(
-(AttributeData=AttributeData'/Game/GameData/Attributes/DamageMultipliers/Att_WeaponDamageMultiplier.Att_WeaponDamageMultiplier',ModifierType=EGameplayModOp::Additive,BaseModifierValue=(BaseValueConstant=0.15f)),
-(AttributeData=AttributeData'/Game/GameData/Attributes/DamageMultipliers/Att_DamageSourceInstigatorMultiplier_Melee.Att_DamageSourceInstigatorMultiplier_Melee',ModifierType=EGameplayModOp::Additive,BaseModifierValue=(BaseValueConstant=0.15f)),
-(AttributeData=AttributeData'/Game/GameData/Attributes/ActionSkill/Att_ActionSkillCooldownRate.Att_ActionSkillCooldownRate',ModifierType=EGameplayModOp::Additive,BaseModifierValue=(BaseValueConstant=0.05f))
+(AttributeData=AttributeData'/Game/GameData/Attributes/DamageMultipliers/Att_WeaponDamageMultiplier.Att_WeaponDamageMultiplier',ModifierType=Additive,BaseModifierValue=(BaseValueConstant=0.15)),
+(AttributeData=AttributeData'/Game/GameData/Attributes/DamageMultipliers/Att_DamageSourceInstigatorMultiplier_Melee.Att_DamageSourceInstigatorMultiplier_Melee',ModifierType=Additive,BaseModifierValue=(BaseValueConstant=0.15)),
+(AttributeData=AttributeData'/Game/GameData/Attributes/ActionSkill/Att_ActionSkillCooldownRate.Att_ActionSkillCooldownRate',ModifierType=Additive,BaseModifierValue=(BaseValueConstant=0.05))
 )"
+
+# Add stack triggers
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/PassiveSkill_Operative_Multitasker.Default__PassiveSkill_Operative_Multitasker_C,OnActionSkillActivated,0,,
+"ApplyStatusEffectEvent'"/Game/GameData/Events/StatusEffect/ApplyStatusEffectEvent_AddStack.ApplyStatusEffectEvent_AddStack"'"
+
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/PassiveSkill_Operative_Multitasker.Default__PassiveSkill_Operative_Multitasker_C,OnActionSkillDeactivated,0,,
+"ApplyStatusEffectEvent'"/Game/GameData/Events/StatusEffect/ApplyStatusEffectEvent_RemoveStack.ApplyStatusEffectEvent_RemoveStack"'"
 
 # --- PRAEMUNITUS ---
 
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Praemunitus/PassiveSkill_Operative_Praemunitus.Default__PassiveSkill_Operative_Praemunitus_C,AbilityDescription,0,,
-"Whenever one or more of Zane's action skills are active, he gains increased [skillbold]10% Movement Speed[/skillbold], [skillbold]15% Magazine Size[/skillbold], and [skillbold]20% Weapon Swap Speed[/skillbold] per active skill."
+"Active skills grant <font color=\"#F7D358\">10% Movement Speed</font>, <font color=\"#F7D358\">15% Magazine Size</font>, and <font color=\"#F7D358\">20% Weapon Swap Speed</font>."
 
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Praemunitus/StatusEffect_Operative_Praemunitus.StatusEffect_Operative_Praemunitus,AttributeEffects,0,,
 "(
-(AttributeData=AttributeData'/Game/GameData/Attributes/Character/Att_GroundSpeedScale.Att_GroundSpeedScale',ModifierType=EGameplayModOp::Additive,BaseModifierValue=(BaseValueConstant=0.10f)),
-(AttributeData=AttributeData'/Game/GameData/Attributes/Character/Att_WeaponSwapSpeedScale.Att_WeaponSwapSpeedScale',ModifierType=EGameplayModOp::Additive,BaseModifierValue=(BaseValueConstant=0.20f)),
-(AttributeData=AttributeData'/Game/GameData/Attributes/Character/Att_MagazineSize.Att_MagazineSize',ModifierType=EGameplayModOp::Additive,BaseModifierValue=(BaseValueConstant=0.15f))
+(AttributeData=AttributeData'/Game/GameData/Attributes/Character/Att_GroundSpeedScale.Att_GroundSpeedScale',ModifierType=Additive,BaseModifierValue=(BaseValueConstant=0.10)),
+(AttributeData=AttributeData'/Game/GameData/Attributes/Character/Att_WeaponSwapSpeedScale.Att_WeaponSwapSpeedScale',ModifierType=Additive,BaseModifierValue=(BaseValueConstant=0.20)),
+(AttributeData=AttributeData'/Game/GameData/Attributes/Weapon/Att_MagazineSizeScale.Att_MagazineSizeScale',ModifierType=Additive,BaseModifierValue=(BaseValueConstant=0.15))
 )"
 
 # --- BORROWED TIME ---
 
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/BorrowedTime/PassiveSkill_Operative_BorrowedTime.Default__PassiveSkill_Operative_BorrowedTime_C,AbilityDescription,0,,
-"Increases Action Skill Duration by [skillbold]15%[/skillbold] and Magazine Size by [skillbold]10%[/skillbold] per active skill."
+"Increases <font color=\"#F7D358\">Action Skill Duration by 15%</font> and <font color=\"#F7D358\">Magazine Size by 10%</font>."
 
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/BorrowedTime/StatusEffect_Operative_BorrowedTime.StatusEffect_Operative_BorrowedTime,AttributeEffects,0,,
 "(
-(AttributeData=AttributeData'/Game/GameData/Attributes/Weapon/Att_MagazineSizeScale.Att_MagazineSizeScale',ModifierType=EGameplayModOp::Additive,BaseModifierValue=(BaseValueConstant=0.10f)),
-(AttributeData=AttributeData'/Game/GameData/Attributes/ActionSkill/Att_ActionSkillDuration.Att_ActionSkillDuration',ModifierType=EGameplayModOp::Additive,BaseModifierValue=(BaseValueConstant=0.15f))
+(AttributeData=AttributeData'/Game/GameData/Attributes/Weapon/Att_MagazineSizeScale.Att_MagazineSizeScale',ModifierType=Additive,BaseModifierValue=(BaseValueConstant=0.10)),
+(AttributeData=AttributeData'/Game/GameData/Attributes/ActionSkill/Att_ActionSkillDuration.Att_ActionSkillDuration',ModifierType=Additive,BaseModifierValue=(BaseValueConstant=0.15))
 )"
 
 # --- DONNYBROOK ---
 
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Donnybrook/PassiveSkill_Operative_Donnybrook.Default__PassiveSkill_Operative_Donnybrook_C,AbilityDescription,0,,
-"Regenerate [skillbold]2%[/skillbold] of Max Health per second per active skill."
+"Regenerate <font color=\"#F7D358\">2% of Max Health</font> per second while skills are active."
 
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Donnybrook/StatusEffect_Operative_Donnybrook.StatusEffect_Operative_Donnybrook,AttributeEffects,0,,
 "(
-(AttributeData=AttributeData'/Game/GameData/Attributes/Health/Att_HealthPassivePercentRegenerationRate.Att_HealthPassivePercentRegenerationRate',ModifierType=EGameplayModOp::Additive,BaseModifierValue=(BaseValueConstant=0.02f))
+(AttributeData=AttributeData'/Game/GameData/Attributes/Health/Att_HealthPassivePercentRegenerationRate.Att_HealthPassivePercentRegenerationRate',ModifierType=Additive,BaseModifierValue=(BaseValueConstant=0.02))
 )"
 
 # --- DOUBLE BARREL ---
 
-# Using existing nova effect instead of custom one
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/DoubleBarrel/PassiveSkill_Operative_DoubleBarrel.Default__PassiveSkill_Operative_DoubleBarrel_C,AbilityDescription,0,,
-"When Zane summons his Digi-Clone, it unleashes a [skillbold]Radiation Nova[/skillbold] dealing [skillbold]10,000 damage[/skillbold] to nearby enemies."
+"Clone activation releases a <font color=\"#F7D358\">Radiation Nova</font> dealing <font color=\"#F7D358\">10,000 damage</font>."
 
+# Nova effect with proper implementation
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/DoubleBarrel/PassiveSkill_Operative_DoubleBarrel.PassiveSkill_Operative_DoubleBarrel_C,OnActionSkillActivatedEffects,0,,
 "(
-(EffectClass=BlueprintGeneratedClass'/Game/GameData/StatusEffects/StatusEffect_Nova_ShieldBreak.StatusEffect_Nova_ShieldBreak_C',EffectData=(EffectContext=EffectContext'/Game/GameData/EffectContext/EffectContext_Instigator.EffectContext_Instigator',EffectScope=Self))
-)"
-
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/DoubleBarrel/PassiveSkill_Operative_DoubleBarrel.PassiveSkill_Operative_DoubleBarrel_C,StatusEffectData,0,,
-"(
-(StatusEffectData=(StatusEffectClass=BlueprintGeneratedClass'/Game/GameData/StatusEffects/StatusEffect_Nova_ShieldBreak.StatusEffect_Nova_ShieldBreak_C',Duration=0.0f,StackingStrategy=None,ApplicationChance=1.0f,ApplicationRequirements=None))
+(EffectClass=BlueprintGeneratedClass'/Game/GameData/StatusEffects/StatusEffect_Nova_Generic.StatusEffect_Nova_Generic_C',
+EffectData=(
+EffectContext=EffectContext'/Game/GameData/EffectContext/EffectContext_Instigator.EffectContext_Instigator',
+DamageType=DamageType'/Game/GameData/DamageTypes/DT_Radiation.DT_Radiation',
+DamageScale=10000,
+Radius=800,
+bIgnoreTeams=True))
 )"
