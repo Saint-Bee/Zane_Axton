@@ -10,7 +10,7 @@
 
 # Change skill description - MultiTasker (Synchronicity)
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/PassiveSkill_Operative_Multitasker.Default__PassiveSkill_Operative_Multitasker_C,AbilityDescription.string,0,,
-Whenever one or more of Zane's action skills are active, he gains increased [skillbold]Gun Damage[/skillbold] and [skillbold]Melee Damage[/skillbold] for each active action skill.
+Whenever one or more of Zane's action skills are active, he gains increased [skillbold]Gun Damage[/skillbold], [skillbold]Melee Damage[/skillbold], and [skillbold]Action Skill Cooldown[/skillbold] for each active action skill.
 
 # Set MultiTasker/Synchronicity stacking cap to 5
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/StatusEffect_Operative_Multitasker.StatusEffect_Operative_Multitasker,StackingStrategy,0,StatusEffectStackingStrategyData_Capped,/Game/GameData/StackingStrategy/StackingStrategy_Capped_5.StackingStrategy_Capped_5
@@ -43,6 +43,7 @@ SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passiv
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Praemunitus/PassiveSkill_Operative_Praemunitus.Default__PassiveSkill_Operative_Praemunitus_C,AbilityDescription.string,0,,
 Whenever one or more of Zane's action skills are active, he gains increased [skillbold]Movement Speed[/skillbold], [skillbold]Magazine Size[/skillbold], and [skillbold]Weapon Swap Speed[/skillbold] for each active action skill.
 
+
 # Attribute Effects - Movement Speed, Weapon Swap Speed, Magazine Size
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Praemunitus/StatusEffect_Operative_Praemunitus.StatusEffect_Operative_Praemunitus,AttributeEffects,0,,(
     (AttributeData=/Game/GameData/Attributes/Character/Att_GroundSpeedScale,
@@ -61,8 +62,9 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_
      Mutator=OakPassiveAbilityAttributeEffectMutatorData'"/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Praemunitus/StatusEffect_Operative_Praemunitus.StatusEffect_Operative_Praemunitus:Mutator_OakPassiveAbilityAttributeEffectMutatorData"')
 )
 
-#change skill description Borowed time
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/BorrowedTime/PassiveSkill_Operative_BorrowedTime.Default__PassiveSkill_Operative_BorrowedTime_C,AbilityDescription.string,0,,Whenever one or more of Zane's action skills are active, he gains increased [skillbold]Magazine Size[/skillbold] and [skillbold]Action Skill Duration[/skillbold] for each active action skill.
+# Change skill description - Borrowed Time
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/BorrowedTime/PassiveSkill_Operative_BorrowedTime.Default__PassiveSkill_Operative_BorrowedTime_C,AbilityDescription.string,0,,
+Whenever one or more of Zane's action skills are active, he gains increased [skillbold]Magazine Size[/skillbold] and [skillbold]Action Skill Duration[/skillbold] for each active action skill.
 
 # Giving Borrowed Time increased magazine size
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/BorrowedTime/StatusEffect_Operative_BorrowedTime.StatusEffect_Operative_BorrowedTime,AttributeEffects,0,,((AttributeData=/Game/GameData/Attributes/Weapon/Att_MagazineSizeScale,ModifierType=Scale,BaseModifierValue=(BaseValueConstant=0,DataTableValue=(DataTable=),BaseValueScale=1),Mutator=OakPassiveAbilityAttributeEffectMutatorData'"/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/BorrowedTime/StatusEffect_Operative_BorrowedTime.StatusEffect_Operative_BorrowedTime:Mutator_OakPassiveAbilityAttributeEffectMutatorData"'))
@@ -70,8 +72,10 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_
 
 
 
-#change skill description Donnybrook
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Praemunitus/PassiveSkill_Operative_Praemunitus.Default__PassiveSkill_Operative_Praemunitus_C,AbilityDescription.string,0,,Whenever one or more of Zane's action skills are active, he gains increased [skillbold]Health Regen[/skillbold] for each active action skill
+# Change skill description - Donnybrook
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Donnybrook/PassiveSkill_Operative_Donnybrook.Default__PassiveSkill_Operative_Donnybrook_C,AbilityDescription.string,0,,
+Whenever one or more of Zane's action skills are active, he gains increased [skillbold]Health Regen[/skillbold] for each active action skill.
+
 
 #change donnebrook to total health regen 
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Donnybrook/StatusEffect_Operative_Donnybrook.StatusEffect_Operative_Donnybrook,AttributeEffects.AttributeEffects[1].AttributeData,0,,/Game/GameData/Attributes/Health/Att_HealthPassivePercentRegenerationRate.Att_HealthPassivePercentRegenerationRate
@@ -84,7 +88,7 @@ SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Action
 
 # Change skill description for Double Barrel to mention nova damage
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/DoubleBarrel/PassiveSkill_Operative_DoubleBarrel.Default__PassiveSkill_Operative_DoubleBarrel_C,AbilityDescription.string,0,,
-When Zane summons his Digi-Clone, it is equipped with a copy of Zane's current weapon and unleashes a [skillbold]Nova[/skillbold] that deals damage to nearby enemies.
+When Zane summons his Digi-Clone, it is equipped with a copy of Zane's current weapon and unleashes a [skillbold]Nova[/skillbold] that deals [skillbold]Nova Damage[/skillbold] to nearby enemies.
 
 # Override Nova Damage to 40,000 for the Double Barrel nova effect
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/GameData/StatusEffects/StatusEffect_Nova_Radiation.StatusEffect_Nova_Radiation,AttributeEffects,0,,(
