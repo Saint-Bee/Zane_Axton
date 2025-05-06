@@ -6,10 +6,10 @@
 # ===== PASSIVE SKILLS ===== #
 
 # --- MULTITASKER ---
-SparkPatchEntry,(1,5,1,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/PassiveSkill_Operative_Multitasker.Default__PassiveSkill_Operative_Multitasker_C,AbilityDescription,0,,
+SparkPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/PassiveSkill_Operative_Multitasker.Default__PassiveSkill_Operative_Multitasker_C,AbilityDescription,0,,
 "<font color='#F7D358'>Level $LEVEL$:</font> +[skillbold]{0|12%->60%}[/skillbold] Gun Damage, +[skillbold]{0|12%->60%}[/skillbold] Melee Damage, +[skillbold]{0|3%->15%}[/skillbold] Cooldown Rate per active skill (Max 5 stacks)"
 
-SparkPatchEntry,(1,5,1,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/StatusEffect_Operative_Multitasker.StatusEffect_Operative_Multitasker,AttributeEffects,0,,
+SparkPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/StatusEffect_Operative_Multitasker.StatusEffect_Operative_Multitasker,AttributeEffects,0,,
 "(
 (AttributeData=Att_WeaponDamageMultiplier,ModifierType=Additive,BaseModifierValue=(BaseValueConstant={0|0.12->0.60})),
 (AttributeData=Att_DamageSourceInstigatorMultiplier_Melee,ModifierType=Additive,BaseModifierValue=(BaseValueConstant={0|0.12->0.60})),
@@ -17,10 +17,10 @@ SparkPatchEntry,(1,5,1,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Desig
 )"
 
 # --- PRAEMUNITUS ---
-SparkPatchEntry,(1,5,1,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Praemunitus/PassiveSkill_Operative_Praemunitus.Default__PassiveSkill_Operative_Praemunitus_C,AbilityDescription,0,,
+SparkPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Praemunitus/PassiveSkill_Operative_Praemunitus.Default__PassiveSkill_Operative_Praemunitus_C,AbilityDescription,0,,
 "<font color='#F7D358'>Level $LEVEL$:</font> +[skillbold]{0|8%->40%}[/skillbold] Move Speed, +[skillbold]{0|12%->60%}[/skillbold] Mag Size, +[skillbold]{0|16%->80%}[/skillbold] Swap Speed per active skill"
 
-SparkPatchEntry,(1,5,1,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Praemunitus/StatusEffect_Operative_Praemunitus.StatusEffect_Operative_Praemunitus,AttributeEffects,0,,
+SparkPatchEntry,(1,5,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Praemunitus/StatusEffect_Operative_Praemunitus.StatusEffect_Operative_Praemunitus,AttributeEffects,0,,
 "(
 (AttributeData=Att_GroundSpeedScale,ModifierType=Additive,BaseModifierValue=(BaseValueConstant={0|0.08->0.40})),
 (AttributeData=Att_MagazineSizeScale,ModifierType=Additive,BaseModifierValue=(BaseValueConstant={0|0.12->0.60})),
@@ -30,18 +30,18 @@ SparkPatchEntry,(1,5,1,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Desig
 # ===== ACTION SKILLS ===== #
 
 # --- DIGI-CLONE ---
-SparkPatchEntry,(1,5,1,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/ActionSkills/Clone/BP_ActionSkill_Operative_Clone.Default__BP_ActionSkill_Operative_Clone_C,SkillDescription,0,,
+SparkPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/ActionSkills/Clone/BP_ActionSkill_Operative_Clone.Default__BP_ActionSkill_Operative_Clone_C,SkillDescription,0,,
 "<font color='#F7D358'>Level $LEVEL$:</font> Deploys a clone that deals [skillbold]{0|75%->125%}[/skillbold] of your damage. On activation: [skillbold]{0|15k->35k}[/skillbold] Radiation Nova"
 
-SparkPatchEntry,(1,5,1,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/ActionSkills/Clone/BP_ActionSkill_Operative_Clone.Default__BP_ActionSkill_Operative_Clone_C,DamageScale,0,,"{0|0.75->1.25}"
+SparkPatchEntry,(1,5,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/ActionSkills/Clone/BP_ActionSkill_Operative_Clone.Default__BP_ActionSkill_Operative_Clone_C,DamageScale,0,,"{0|0.75->1.25}"
 
-SparkPatchEntry,(1,5,1,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/DoubleBarrel/StatusEffect_Nova_CloneNova.StatusEffect_Nova_CloneNova,EffectDamage,0,,"{0|15000->35000}"
+SparkPatchEntry,(1,5,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/DoubleBarrel/StatusEffect_Nova_CloneNova.StatusEffect_Nova_CloneNova,EffectDamage,0,,"{0|15000->35000}"
 
 # --- BARRIER ---
-SparkPatchEntry,(1,5,1,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/ActionSkills/Barrier/BP_ActionSkill_Operative_Barrier.Default__BP_ActionSkill_Operative_Barrier_C,SkillDescription,0,,
+SparkPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/ActionSkills/Barrier/BP_ActionSkill_Operative_Barrier.Default__BP_ActionSkill_Operative_Barrier_C,SkillDescription,0,,
 "<font color='#F7D358'>Level $LEVEL$:</font> Deploys a shield granting [skillbold]{0|15%->35%}[/skillbold] damage reduction and [skillbold]{0|20%->40%}[/skillbold] fire rate boost"
 
-SparkPatchEntry,(1,5,1,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/ActionSkills/Barrier/StatusEffect_Operative_Barrier.StatusEffect_Operative_Barrier,AttributeEffects,0,,
+SparkPatchEntry,(1,5,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/ActionSkills/Barrier/StatusEffect_Operative_Barrier.StatusEffect_Operative_Barrier,AttributeEffects,0,,
 "(
 (AttributeData=Att_DamageTakenMultiplier,ModifierType=Multiplicative,BaseModifierValue=(BaseValueConstant={0|0.85->0.65})),
 (AttributeData=Att_WeaponFireRateScale,ModifierType=Additive,BaseModifierValue=(BaseValueConstant={0|0.20->0.40}))
