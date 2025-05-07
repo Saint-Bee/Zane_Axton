@@ -1,0 +1,55 @@
+# Axton Gunpowder Tree Replacement for Zane's Clone Tree
+
+# ------------------------------------------
+# Rename the Skill Tree
+# ------------------------------------------
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/SkillTrees/SkillTree_Operative_1.SkillTree_Operative_1_C,TreeName,The Gunpowder Tree
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/SkillTrees/SkillTree_Operative_1.SkillTree_Operative_1_C,TreeDescription,An explosive-oriented skill tree featuring a deployable turret.
+
+# ------------------------------------------
+# Rename Digi-Clone to Sabre Turret
+# ------------------------------------------
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/ActionSkills/AS_Operative_DigiClone.AS_Operative_DigiClone_C,DisplayName,Sabre Turret
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/ActionSkills/AS_Operative_DigiClone.AS_Operative_DigiClone_C,Description,Deploy a turret that automatically targets enemies.
+
+# ------------------------------------------
+# Skill Slot 1 - Impact (Gun Damage Boost)
+# ------------------------------------------
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/Skill_Operative_Clone_1.Skill_Operative_Clone_1_C,DisplayName,Impact
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/Skill_Operative_Clone_1.Skill_Operative_Clone_1_C,Description,Increases gun damage.
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/Skill_Operative_Clone_1.Skill_Operative_Clone_1_C,GradeEffectDefinitions[0].AttributeEffectDefinitions[0].ModifierValue.BaseValueConstant,0.20
+
+# ------------------------------------------
+# Skill Slot 2 - Sentry (Turret Duration + Rate)
+# ------------------------------------------
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/Skill_Operative_Clone_2.Skill_Operative_Clone_2_C,DisplayName,Sentry
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/Skill_Operative_Clone_2.Skill_Operative_Clone_2_C,Description,Increases the duration and fire rate of the Sabre Turret.
+
+# ------------------------------------------
+# Skill Slot 3 - Steady (Explosive Damage)
+# ------------------------------------------
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/Skill_Operative_Clone_3.Skill_Operative_Clone_3_C,DisplayName,Steady
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/Skill_Operative_Clone_3.Skill_Operative_Clone_3_C,Description,Boosts explosive weapon and grenade damage.
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/Skill_Operative_Clone_3.Skill_Operative_Clone_3_C,GradeEffectDefinitions[0].AttributeEffectDefinitions[0].ModifierValue.BaseValueConstant,0.30
+
+# ------------------------------------------
+# Skill Slot 4 - Grenadier (Grenade Regen)
+# ------------------------------------------
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/Skill_Operative_Clone_4.Skill_Operative_Clone_4_C,DisplayName,Grenadier
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/Skill_Operative_Clone_4.Skill_Operative_Clone_4_C,Description,Regenerates grenade ammo over time.
+
+# ------------------------------------------
+# Skill Slot 5 - Do or Die (Unlocks grenade launcher on turret)
+# ------------------------------------------
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/Skill_Operative_Clone_5.Skill_Operative_Clone_5_C,DisplayName,Do or Die
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/Skill_Operative_Clone_5.Skill_Operative_Clone_5_C,Description,The Sabre Turret can now fire grenades.
+
+# ------------------------------------------
+# Skill Slot 6 - Nuke (Deploy causes explosion)
+# ------------------------------------------
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/Skill_Operative_Clone_6.Skill_Operative_Clone_6_C,DisplayName,Nuke
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/Skill_Operative_Clone_6.Skill_Operative_Clone_6_C,Description,When deployed, the Sabre Turret causes a powerful explosion.
+
+# ------------------------------------------
+# Placeholder FX: Later, you can replace DigiClone's spawn FX with a nuke VFX or AOE explosion
+# ------------------------------------------
