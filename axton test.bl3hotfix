@@ -47,9 +47,23 @@ SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/S
 # ------------------------------------------
 # Skill Slot 6 - Nuke (Deploy causes explosion)
 # ------------------------------------------
+# Add Nuke Deployment to the Gunpowder tree at Tier 6
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/SkillTrees/Operative_Gunpowder.SkillTree_Operative_Gunpowder,Skills[5],/Game/PlayerCharacters/Operative/Skills/NukeDeployment/NukeDeployment.Ability_NukeDeployment_C
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/Skill_Operative_Clone_6.Skill_Operative_Clone_6_C,DisplayName,Nuke
 SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/Clone/Skill_Operative_Clone_6.Skill_Operative_Clone_6_C,Description,When deployed, the Sabre Turret causes a powerful explosion.
 
 # ------------------------------------------
-# Placeholder FX: Later, you can replace DigiClone's spawn FX with a nuke VFX or AOE explosion
+# Define new Gunpowder capstone skill
+# ------------------------------------------
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/Skills/NukeDeployment/NukeDeployment.Ability_NukeDeployment_C,MaxSkillPoints,1
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/Skills/NukeDeployment/NukeDeployment.Ability_NukeDeployment_C,AbilityName,Nuke Deployment
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/Skills/NukeDeployment/NukeDeployment.Ability_NukeDeployment_C,AbilityDescription,Deploying the Sabre Turret causes a nuclear blast that damages nearby enemies.
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/Skills/NukeDeployment/NukeDeployment.Ability_NukeDeployment_C,AssociatedActionSkill,/Game/PlayerCharacters/Operative/_Shared/ActionSkills/AS_Operative_DigiClone.AS_Operative_DigiClone_C
+
+# ------------------------------------------
+# Only trigger Nuke FX and Damage if the skill is learned
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/ActionSkills/AS_Operative_DigiClone.AS_Operative_DigiClone_C,ConditionalSpawnEffectAbilityClass,/Game/PlayerCharacters/Operative/Skills/NukeDeployment/NukeDeployment.Ability_NukeDeployment_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/ActionSkills/AS_Operative_DigiClone.AS_Operative_DigiClone_C,ConditionalStartSpawnEffect,/Game/Effects/Enemies/Maliwan/Trooper/Abilities/Nuke/FX_MaliwanTrooper_Nuke_Impact
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/ActionSkills/AS_Operative_DigiClone.AS_Operative_DigiClone_C,ConditionalAOEDamageTemplate,/Game/Gear/Weapons/Launcher/_Shared/DoT/Damage_Radius_NukeClone
+
 # ------------------------------------------
