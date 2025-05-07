@@ -1,85 +1,139 @@
 ###
-# Name: Zane-To-Axton Gunpowder Tree
+# Name: Zane to Axton Gunpowder Tree
 # Version: 1.0.0
 # Author: Claude
-# Description: Transforms Zane's Clone skill tree into Axton's Gunpowder tree from BL2
+# Categories: char-operative, skills
+# License: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+# License URL: https://creativecommons.org/licenses/by-sa/4.0/
 ###
 
-@title Zane to Axton - Gunpowder Tree
+###
+# This mod replaces Zane's clone skill tree with Axton's gunpowder tree from BL2
+# It modifies the skill definitions, effects, and descriptions to match.
+###
 
-# Base Game Variables
-@categories = Base Game
+# Prefix for Zane's Blueprint paths
+PREFIX = /Game/PlayerCharacters/Operative/_Shared
 
-# Replace Clone Action Skill with Sabre Turret
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Skill_ActionSkill/ActionSkill_Clone.Default__ActionSkill_Clone_C,ActionSkillDescription,0,,Deploy a Sabre Turret that automatically attacks enemies with bullets and missiles. The Sabre Turret lasts for 15 seconds.
+# Tier 1 Skills
 
-# Rename the tree to "Gunpowder" instead of "Double Agent"
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Skill_TreeRoot/Skill_TreeRoot_DoubleAgent.Default__Skill_TreeRoot_DoubleAgent_C,SkillDescription,0,,Gunpowder tree enhances explosive damage and provides bonuses to your Sabre Turret
+# DIGI-CLONE to IMPACT (Tier 1, 5 points)
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_1.Object_1.AbilityClass,0,,/Game/PlayerCharacters/Operative/_DLC/Skills/AxtonsImpact.AxtonsImpact_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_1.Object_1.SkillDescription,0,,"Increases Gun Damage and Melee Damage.
 
-# Tier 1 Skills (3/3)
+Gun Damage: +4% per level
+Melee Damage: +3% per level"
 
-# Replace "Synchronicity" with "Impact"
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier1/Skill_DoubleAgent_1_1.Default__Skill_DoubleAgent_1_1_C,SkillName,0,,Impact
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier1/Skill_DoubleAgent_1_1.Default__Skill_DoubleAgent_1_1_C,SkillDescription,0,,Increases Gun Damage.
+# SUPERSONIC MAN to EXPERTISE (Tier 1, 5 points)
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_1.Object_2.AbilityClass,0,,/Game/PlayerCharacters/Operative/_DLC/Skills/AxtonsExpertise.AxtonsExpertise_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_1.Object_2.SkillDescription,0,,"Increases Weapon Swap Speed, Weapon Mode Switch Speed, and reduces Reload Time.
 
-# Replace "Praemunitus" with "Expertise"
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier1/Skill_DoubleAgent_1_2.Default__Skill_DoubleAgent_1_2_C,SkillName,0,,Expertise
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier1/Skill_DoubleAgent_1_2.Default__Skill_DoubleAgent_1_2_C,SkillDescription,0,,Increases Weapon Swap Speed and Weapon Equip Speed.
+Weapon Swap Speed: +14% per level
+Weapon Mode Switch Speed: +14% per level
+Reload Speed: +7% per level"
 
-# Replace "Donnybrook" with "Metal Storm"
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier1/Skill_DoubleAgent_1_3.Default__Skill_DoubleAgent_1_3_C,SkillName,0,,Metal Storm
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier1/Skill_DoubleAgent_1_3.Default__Skill_DoubleAgent_1_3_C,SkillDescription,0,,Kill Skill. Killing an enemy increases your Fire Rate and Recoil Reduction.
+# PRAEMUNITUS to METAL STORM (Tier 1, 5 points)
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_1.Object_3.AbilityClass,0,,/Game/PlayerCharacters/Operative/_DLC/Skills/AxtonsMetalStorm.AxtonsMetalStorm_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_1.Object_3.SkillDescription,0,,"Kill Skill. Killing an enemy increases Fire Rate and reduces Recoil for a short time.
 
-# Tier 2 Skills (3/3)
+Fire Rate: +12% per level
+Recoil Reduction: +15% per level"
 
-# Replace "Fractal Frags" with "Duty Calls"
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier2/Skill_DoubleAgent_2_1.Default__Skill_DoubleAgent_2_1_C,SkillName,0,,Duty Calls
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier2/Skill_DoubleAgent_2_1.Default__Skill_DoubleAgent_2_1_C,SkillDescription,0,,Increases Gun Damage and Fire Rate with non-elemental weapons.
+# Tier 2 Skills
 
-# Replace "Duct Tape Mod" with "Ranger"
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier2/Skill_DoubleAgent_2_2.Default__Skill_DoubleAgent_2_2_C,SkillName,0,,Ranger
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier2/Skill_DoubleAgent_2_2.Default__Skill_DoubleAgent_2_2_C,SkillDescription,0,,Increases Gun Damage and Accuracy.
+# FRACTAL FRAGS to STEADY (Tier 2, 5 points)
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_2.Object_1.AbilityClass,0,,/Game/PlayerCharacters/Operative/_DLC/Skills/AxtonsSteady.AxtonsSteady_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_2.Object_1.SkillDescription,0,,"Increases Accuracy and reduces the effect of recoil with all weapon types.
 
-# Replace "Boom. Enhance." with "Able"
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier2/Skill_DoubleAgent_2_3.Default__Skill_DoubleAgent_2_3_C,SkillName,0,,Able
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier2/Skill_DoubleAgent_2_3.Default__Skill_DoubleAgent_2_3_C,SkillDescription,0,,Dealing damage regenerates health for a few seconds.
+Accuracy: +6% per level
+Recoil Reduction: +10% per level"
 
-# Tier 3 Skills (3/3)
+# DUCT TAPE MOD to LONGBOW TURRET (Tier 2, 1 point)
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_2.Object_2.AbilityClass,0,,/Game/PlayerCharacters/Operative/_DLC/Skills/AxtonsLongbowTurret.AxtonsLongbowTurret_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_2.Object_2.SkillDescription,0,,"Allows you to throw your Turret to deploy it at a distance.
 
-# Replace "Quick Breather" with "Grenadier"
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier3/Skill_DoubleAgent_3_1.Default__Skill_DoubleAgent_3_1_C,SkillName,0,,Grenadier
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier3/Skill_DoubleAgent_3_1.Default__Skill_DoubleAgent_3_1_C,SkillDescription,0,,Increases Grenade Capacity and Grenade Damage.
+Deploying the Turret now consumes 1 grenade."
 
-# Replace "Pocket Full of Grenades" with "Crisis Management"
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier3/Skill_DoubleAgent_3_2.Default__Skill_DoubleAgent_3_2_C,SkillName,0,,Crisis Management
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier3/Skill_DoubleAgent_3_2.Default__Skill_DoubleAgent_3_2_C,SkillDescription,0,,Increases Maximum Health and Gun Damage. The lower your health, the higher the bonuses.
+# BOOM. ENHANCE. to CRISIS MANAGEMENT (Tier 2, 5 points)
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_2.Object_3.AbilityClass,0,,/Game/PlayerCharacters/Operative/_DLC/Skills/AxtonsCrisisManagement.AxtonsCrisisManagement_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_2.Object_3.SkillDescription,0,,"Your Shield Recharge Rate and Capacity increase as your health decreases.
 
-# Replace "Old-U" with "Double Up"
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier3/Skill_DoubleAgent_3_3.Default__Skill_DoubleAgent_3_3_C,SkillName,0,,Double Up
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier3/Skill_DoubleAgent_3_3.Default__Skill_DoubleAgent_3_3_C,SkillDescription,0,,Adds a second gun to your Sabre Turret that deals Slag damage.
+Shield Recharge Rate: Up to +20% per level
+Shield Capacity: Up to +12% per level"
 
-# Tier 4 Skills (2/3)
+# Tier 3 Skills
 
-# Replace "Supersonic Man" with "Battlefront"
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier4/Skill_DoubleAgent_4_1.Default__Skill_DoubleAgent_4_1_C,SkillName,0,,Battlefront
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier4/Skill_DoubleAgent_4_1.Default__Skill_DoubleAgent_4_1_C,SkillDescription,0,,While your Sabre Turret is active, you deal increased Gun, Melee, and Grenade Damage.
+# WHICH ONE'S REAL to DUTY CALLS (Tier 3, 5 points)
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_3.Object_1.AbilityClass,0,,/Game/PlayerCharacters/Operative/_DLC/Skills/AxtonsDutyCalls.AxtonsDutyCalls_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_3.Object_1.SkillDescription,0,,"Increases Gun Damage and gives bonuses when using weapons with matching elements.
 
-# Replace "Binary System" with "Longbow Turret"
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier4/Skill_DoubleAgent_4_2.Default__Skill_DoubleAgent_4_2_C,SkillName,0,,Longbow Turret
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier4/Skill_DoubleAgent_4_2.Default__Skill_DoubleAgent_4_2_C,SkillDescription,0,,Increases Sabre Turret deploy range and allows it to teleport to enemies.
+Gun Damage: +5% per level
+Element Effect Damage: +3% per level with matching elements"
 
-# Tier 5 Skills (2/3)
+# SCHADENFREUDE to RANGER (Tier 3, 5 points)
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_3.Object_2.AbilityClass,0,,/Game/PlayerCharacters/Operative/_DLC/Skills/AxtonsRanger.AxtonsRanger_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_3.Object_2.SkillDescription,0,,"Improves all your statistics across the board.
 
-# Replace "Trick of the Light" with "Laser Sight"
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier5/Skill_DoubleAgent_5_1.Default__Skill_DoubleAgent_5_1_C,SkillName,0,,Laser Sight
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier5/Skill_DoubleAgent_5_1.Default__Skill_DoubleAgent_5_1_C,SkillDescription,0,,Your Sabre Turret marks targets with a laser, increasing your Critical Hit Damage against marked targets.
+Max Health: +1% per level
+Shield Capacity: +1% per level
+Gun Damage: +2% per level
+Fire Rate: +2% per level
+Accuracy: +2.5% per level
+Reload Speed: +3% per level"
 
-# Replace "Doubled Agent" with "Do or Die"
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier5/Skill_DoubleAgent_5_2.Default__Skill_DoubleAgent_5_2_C,SkillName,0,,Do or Die
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier5/Skill_DoubleAgent_5_2.Default__Skill_DoubleAgent_5_2_C,SkillDescription,0,,You can throw grenades while in Fight For Your Life. Grenades deal increased damage during FFYL.
+# BINARY SYSTEM to ABLE (Tier 3, 5 points)
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_3.Object_3.AbilityClass,0,,/Game/PlayerCharacters/Operative/_DLC/Skills/AxtonsAble.AxtonsAble_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_3.Object_3.SkillDescription,0,,"Whenever you deal damage, you regenerate health for a few seconds.
 
-# Tier 6 Skills (1/1)
+Health Regeneration: +0.4% of your Maximum Health per second, per level"
 
-# Replace "Doppelbanger" with "Nuke"
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier6/Skill_DoubleAgent_6.Default__Skill_DoubleAgent_6_C,SkillName,0,,Nuke
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier6/Skill_DoubleAgent_6.Default__Skill_DoubleAgent_6_C,SkillDescription,0,,Your Sabre Turret creates a nuclear explosion when deployed, dealing massive explosive damage to nearby enemies.
+# Tier 4 Skills
+
+# DOPPLEBANGER to LASER SIGHT (Tier 4, 1 point)
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_4.Object_1.AbilityClass,0,,/Game/PlayerCharacters/Operative/_DLC/Skills/AxtonsLaserSight.AxtonsLaserSight_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_4.Object_1.SkillDescription,0,,"Your Turret gains a laser that marks enemies. Marked enemies take increased damage from all sources.
+
+Marked Enemy Damage Increase: +15%"
+
+# POCKET FULL OF GRENADES to GRENADIER (Tier 4, 5 points)
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_4.Object_2.AbilityClass,0,,/Game/PlayerCharacters/Operative/_DLC/Skills/AxtonsGrenadier.AxtonsGrenadier_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_4.Object_2.SkillDescription,0,,"Increases Grenade Damage and Maximum Grenade carrying capacity.
+
+Grenade Damage: +10% per level
+Grenade Capacity: +1 per level"
+
+# PLAYING DIRTY to BATTLEFRONT (Tier 4, 5 points)
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_4.Object_3.AbilityClass,0,,/Game/PlayerCharacters/Operative/_DLC/Skills/AxtonsBattlefront.AxtonsBattlefront_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_4.Object_3.SkillDescription,0,,"While your Turret is deployed, you deal increased Gun Damage.
+
+Gun Damage: +6% per level"
+
+# Tier 5 Skills
+
+# OLD-U to WILLING (Tier 5, 5 points)
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_5.Object_1.AbilityClass,0,,/Game/PlayerCharacters/Operative/_DLC/Skills/AxtonsWilling.AxtonsWilling_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_5.Object_1.SkillDescription,0,,"Increases your Shield Recharge Rate and Shield Recharge Delay.
+
+Shield Recharge Rate: +10% per level
+Shield Recharge Delay: -12% per level"
+
+# DIGITAL DISTRIBUTION to PRESSURE (Tier 5, 5 points)
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_5.Object_2.AbilityClass,0,,/Game/PlayerCharacters/Operative/_DLC/Skills/AxtonsPressure.AxtonsPressure_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_5.Object_2.SkillDescription,0,,"Your Reload Speed and Weapon Swap Speed increase as your health decreases.
+
+Reload Speed: Up to +20% per level
+Weapon Swap Speed: Up to +14% per level"
+
+# TRICK OF THE LIGHT to DO OR DIE (Tier 5, 1 point)
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_5.Object_3.AbilityClass,0,,/Game/PlayerCharacters/Operative/_DLC/Skills/AxtonsDoOrDie.AxtonsDoOrDie_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_5.Object_3.SkillDescription,0,,"You can throw grenades while in Fight For Your Life.
+
+Thrown grenades during Fight For Your Life deal +10% damage."
+
+# Capstone
+
+# DOUBLE BARREL to NUKE (Tier 6, 1 point)
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_6.Object_1.AbilityClass,0,,/Game/PlayerCharacters/Operative/_DLC/Skills/AxtonsNuke.AxtonsNuke_C
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/Skills/SkillTree_Clone.SkillTree_Clone:Tier_6.Object_1.SkillDescription,0,,"Your Turret creates a Nuclear Blast when deployed. The Nuclear Blast deals high Explosive Damage to all nearby enemies.
+
+Additionally, your Turret now fires Nuclear Missiles which deal bonus Explosive Damage."
