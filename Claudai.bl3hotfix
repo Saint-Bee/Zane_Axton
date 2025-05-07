@@ -1,0 +1,85 @@
+###
+# Name: Zane-To-Axton Gunpowder Tree
+# Version: 1.0.0
+# Author: Claude
+# Description: Transforms Zane's Clone skill tree into Axton's Gunpowder tree from BL2
+###
+
+@title Zane to Axton - Gunpowder Tree
+
+# Base Game Variables
+@categories = Base Game
+
+# Replace Clone Action Skill with Sabre Turret
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Skill_ActionSkill/ActionSkill_Clone.Default__ActionSkill_Clone_C,ActionSkillDescription,0,,Deploy a Sabre Turret that automatically attacks enemies with bullets and missiles. The Sabre Turret lasts for 15 seconds.
+
+# Rename the tree to "Gunpowder" instead of "Double Agent"
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Skill_TreeRoot/Skill_TreeRoot_DoubleAgent.Default__Skill_TreeRoot_DoubleAgent_C,SkillDescription,0,,Gunpowder tree enhances explosive damage and provides bonuses to your Sabre Turret
+
+# Tier 1 Skills (3/3)
+
+# Replace "Synchronicity" with "Impact"
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier1/Skill_DoubleAgent_1_1.Default__Skill_DoubleAgent_1_1_C,SkillName,0,,Impact
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier1/Skill_DoubleAgent_1_1.Default__Skill_DoubleAgent_1_1_C,SkillDescription,0,,Increases Gun Damage.
+
+# Replace "Praemunitus" with "Expertise"
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier1/Skill_DoubleAgent_1_2.Default__Skill_DoubleAgent_1_2_C,SkillName,0,,Expertise
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier1/Skill_DoubleAgent_1_2.Default__Skill_DoubleAgent_1_2_C,SkillDescription,0,,Increases Weapon Swap Speed and Weapon Equip Speed.
+
+# Replace "Donnybrook" with "Metal Storm"
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier1/Skill_DoubleAgent_1_3.Default__Skill_DoubleAgent_1_3_C,SkillName,0,,Metal Storm
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier1/Skill_DoubleAgent_1_3.Default__Skill_DoubleAgent_1_3_C,SkillDescription,0,,Kill Skill. Killing an enemy increases your Fire Rate and Recoil Reduction.
+
+# Tier 2 Skills (3/3)
+
+# Replace "Fractal Frags" with "Duty Calls"
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier2/Skill_DoubleAgent_2_1.Default__Skill_DoubleAgent_2_1_C,SkillName,0,,Duty Calls
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier2/Skill_DoubleAgent_2_1.Default__Skill_DoubleAgent_2_1_C,SkillDescription,0,,Increases Gun Damage and Fire Rate with non-elemental weapons.
+
+# Replace "Duct Tape Mod" with "Ranger"
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier2/Skill_DoubleAgent_2_2.Default__Skill_DoubleAgent_2_2_C,SkillName,0,,Ranger
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier2/Skill_DoubleAgent_2_2.Default__Skill_DoubleAgent_2_2_C,SkillDescription,0,,Increases Gun Damage and Accuracy.
+
+# Replace "Boom. Enhance." with "Able"
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier2/Skill_DoubleAgent_2_3.Default__Skill_DoubleAgent_2_3_C,SkillName,0,,Able
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier2/Skill_DoubleAgent_2_3.Default__Skill_DoubleAgent_2_3_C,SkillDescription,0,,Dealing damage regenerates health for a few seconds.
+
+# Tier 3 Skills (3/3)
+
+# Replace "Quick Breather" with "Grenadier"
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier3/Skill_DoubleAgent_3_1.Default__Skill_DoubleAgent_3_1_C,SkillName,0,,Grenadier
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier3/Skill_DoubleAgent_3_1.Default__Skill_DoubleAgent_3_1_C,SkillDescription,0,,Increases Grenade Capacity and Grenade Damage.
+
+# Replace "Pocket Full of Grenades" with "Crisis Management"
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier3/Skill_DoubleAgent_3_2.Default__Skill_DoubleAgent_3_2_C,SkillName,0,,Crisis Management
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier3/Skill_DoubleAgent_3_2.Default__Skill_DoubleAgent_3_2_C,SkillDescription,0,,Increases Maximum Health and Gun Damage. The lower your health, the higher the bonuses.
+
+# Replace "Old-U" with "Double Up"
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier3/Skill_DoubleAgent_3_3.Default__Skill_DoubleAgent_3_3_C,SkillName,0,,Double Up
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier3/Skill_DoubleAgent_3_3.Default__Skill_DoubleAgent_3_3_C,SkillDescription,0,,Adds a second gun to your Sabre Turret that deals Slag damage.
+
+# Tier 4 Skills (2/3)
+
+# Replace "Supersonic Man" with "Battlefront"
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier4/Skill_DoubleAgent_4_1.Default__Skill_DoubleAgent_4_1_C,SkillName,0,,Battlefront
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier4/Skill_DoubleAgent_4_1.Default__Skill_DoubleAgent_4_1_C,SkillDescription,0,,While your Sabre Turret is active, you deal increased Gun, Melee, and Grenade Damage.
+
+# Replace "Binary System" with "Longbow Turret"
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier4/Skill_DoubleAgent_4_2.Default__Skill_DoubleAgent_4_2_C,SkillName,0,,Longbow Turret
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier4/Skill_DoubleAgent_4_2.Default__Skill_DoubleAgent_4_2_C,SkillDescription,0,,Increases Sabre Turret deploy range and allows it to teleport to enemies.
+
+# Tier 5 Skills (2/3)
+
+# Replace "Trick of the Light" with "Laser Sight"
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier5/Skill_DoubleAgent_5_1.Default__Skill_DoubleAgent_5_1_C,SkillName,0,,Laser Sight
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier5/Skill_DoubleAgent_5_1.Default__Skill_DoubleAgent_5_1_C,SkillDescription,0,,Your Sabre Turret marks targets with a laser, increasing your Critical Hit Damage against marked targets.
+
+# Replace "Doubled Agent" with "Do or Die"
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier5/Skill_DoubleAgent_5_2.Default__Skill_DoubleAgent_5_2_C,SkillName,0,,Do or Die
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier5/Skill_DoubleAgent_5_2.Default__Skill_DoubleAgent_5_2_C,SkillDescription,0,,You can throw grenades while in Fight For Your Life. Grenades deal increased damage during FFYL.
+
+# Tier 6 Skills (1/1)
+
+# Replace "Doppelbanger" with "Nuke"
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier6/Skill_DoubleAgent_6.Default__Skill_DoubleAgent_6_C,SkillName,0,,Nuke
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/SkillTrees/Tree_DoubleAgent/Tier6/Skill_DoubleAgent_6.Default__Skill_DoubleAgent_6_C,SkillDescription,0,,Your Sabre Turret creates a nuclear explosion when deployed, dealing massive explosive damage to nearby enemies.
