@@ -1,79 +1,36 @@
-// Gunpowder Tree Start — Replace Zane's Clone Tier 1 with Axton's Gunpowder Skills
 
-// Synchronicity → Impact
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row1/Skill_Synchronicity/SkillName,Value,Impact
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row1/Skill_Synchronicity/SkillDescription,Value,Increases your gun damage.
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row1/Skill_Synchronicity/SkillIcon,Value,/Game/PatchDLC/Event2/PlayerCharacters/Siren/Icons/Phasecast/Passive_Phasecast_3 // temp Axton-style icon
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row1/Skill_Synchronicity/Ability/Ability_GunDamageModifier/ModifierValueFormula.Data.ConstantValue.Constant,Value,0.04 // 4% gun damage per point
+# Zane Clone Tree ➜ Axton Gunpowder Tree Conversion
 
-// Praemunitus → Expertise
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row1/Skill_Praemunitus/SkillName,Value,Expertise
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row1/Skill_Praemunitus/SkillDescription,Value,Increases your reload speed.
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row1/Skill_Praemunitus/SkillIcon,Value,/Game/PatchDLC/Event2/PlayerCharacters/Siren/Icons/Phasecast/Passive_Phasecast_4
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row1/Skill_Praemunitus/Ability/Ability_ReloadSpeed/ModifierValueFormula.Data.ConstantValue.Constant,Value,0.06 // 6% reload speed per point
+# --- Impact ➜ Donnybrook ---
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Donnybrook/StatusEffect_Operative_Donnybrook.StatusEffect_Operative_Donnybrook,AttributeEffects.AttributeEffects[1].AttributeData,0,,/Game/GameData/Attributes/Weapon/Att_WeaponDamage.Att_WeaponDamage
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Donnybrook/StatusEffect_Operative_Donnybrook.StatusEffect_Operative_Donnybrook,AttributeEffects.AttributeEffects[2].AttributeData,0,,/Game/GameData/Attributes/Combat/Att_MeleeDamage.Att_MeleeDamage
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Donnybrook/PassiveSkill_Operative_Donnybrook.PassiveSkill_Operative_Donnybrook_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,Attribute,0,,/Game/GameData/Attributes/Weapon/Att_WeaponDamage.Att_WeaponDamage
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Donnybrook/PassiveSkill_Operative_Donnybrook.PassiveSkill_Operative_Donnybrook_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,FormatText,0,,"[skillbold]Gun Damage:[/skillbold] $VALUE$%"
 
-// Borrowed Time → Steady
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row1/Skill_BorrowedTime/SkillName,Value,Steady
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row1/Skill_BorrowedTime/SkillDescription,Value,Reduces recoil and increases grenade damage.
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row1/Skill_BorrowedTime/SkillIcon,Value,/Game/PatchDLC/Event2/PlayerCharacters/Siren/Icons/Passive_Brawl_6
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row1/Skill_BorrowedTime/Ability/Ability_GrenadeDamageModifier/ModifierValueFormula.Data.ConstantValue.Constant,Value,0.05 // 5% grenade damage
+# --- Expertise ➜ Fractal Frags ---
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/FractalFrags/StatusEffect_Operative_FractalFrags.StatusEffect_Operative_FractalFrags,AttributeEffects.AttributeEffects[0].AttributeData,0,,/Game/GameData/Attributes/Weapon/Att_WeaponReloadSpeed.Att_WeaponReloadSpeed
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/FractalFrags/StatusEffect_Operative_FractalFrags.StatusEffect_Operative_FractalFrags,AttributeEffects.AttributeEffects[1].AttributeData,0,,/Game/GameData/Attributes/Weapon/Att_WeaponSwapSpeed.Att_WeaponSwapSpeed
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/FractalFrags/PassiveSkill_Operative_FractalFrags.PassiveSkill_Operative_FractalFrags_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,Attribute,0,,/Game/GameData/Attributes/Weapon/Att_WeaponReloadSpeed.Att_WeaponReloadSpeed
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/FractalFrags/PassiveSkill_Operative_FractalFrags.PassiveSkill_Operative_FractalFrags_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,FormatText,0,,"[skillbold]Reload Speed:[/skillbold] $VALUE$%"
 
-// Fractal Frags → Longbow Turret
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row2/Skill_FractalFrags/SkillName,Value,Longbow Turret
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row2/Skill_FractalFrags/SkillDescription,Value,Increases the grenade precision of your turret.
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row2/Skill_FractalFrags/SkillIcon,Value,/Game/PatchDLC/Event2/PlayerCharacters/Siren/Icons/Phasecast/Passive_Phasecast_5
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row2/Skill_FractalFrags/Ability/Ability_TurretDamage/ModifierValueFormula.Data.ConstantValue.Constant,Value,0.08 // 8% turret damage per point
+# --- Phalanx Shield ➜ Digital Distribution ---
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../DigitalDistribution.StatusEffect_Operative_DigitalDistribution,AttributeEffects.AttributeEffects[0].AttributeData,0,,/Game/GameData/Attributes/Shield/Att_ShieldCapacity.Att_ShieldCapacity
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../PassiveSkill_Operative_DigitalDistribution_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,Attribute,0,,/Game/GameData/Attributes/Shield/Att_ShieldCapacity.Att_ShieldCapacity
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../PassiveSkill_Operative_DigitalDistribution_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,FormatText,0,,"[skillbold]Shield Capacity:[/skillbold] $VALUE$%"
 
-// Duct Tape Mod → Sentry
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row2/Skill_DuctTapeMod/SkillName,Value,Sentry
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row2/Skill_DuctTapeMod/SkillDescription,Value,Activating your action skill triggers a sentry turret.
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row2/Skill_DuctTapeMod/SkillIcon,Value,/Game/PatchDLC/Event2/PlayerCharacters/Siren/Icons/Phasecast/Passive_Phasecast_7
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row2/Skill_DuctTapeMod/Ability/Ability_SentryEffect/ModifierValueFormula.Data.ConstantValue.Constant,Value,0.12 // 12% sentry effectiveness
+# --- Steady ➜ Quick Breather ---
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../QuickBreather.StatusEffect_Operative_QuickBreather,AttributeEffects.AttributeEffects[0].AttributeData,0,,/Game/GameData/Attributes/Weapon/Att_WeaponRecoilAttenuation.Att_WeaponRecoilAttenuation
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../QuickBreather.StatusEffect_Operative_QuickBreather,AttributeEffects.AttributeEffects[1].AttributeData,0,,/Game/GameData/Attributes/Grenade/Att_GrenadeDamage.Att_GrenadeDamage
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../PassiveSkill_Operative_QuickBreather_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,Attribute,0,,/Game/GameData/Attributes/Grenade/Att_GrenadeDamage.Att_GrenadeDamage
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../PassiveSkill_Operative_QuickBreather_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,FormatText,0,,"[skillbold]Grenade Damage:[/skillbold] $VALUE$%"
 
-// Quick Breather → Laser Sight
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row2/Skill_QuickBreather/SkillName,Value,Laser Sight
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row2/Skill_QuickBreather/SkillDescription,Value,Increases weapon accuracy.
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row2/Skill_QuickBreather/SkillIcon,Value,/Game/PatchDLC/Event2/PlayerCharacters/Siren/Icons/Phasecast/Passive_Phasecast_6
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row2/Skill_QuickBreather/Ability/Ability_AccuracyModifier/ModifierValueFormula.Data.ConstantValue.Constant,Value,0.05 // 5% accuracy per point
+# --- Duct Tape Mod ➜ Binary System ---
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../PassiveSkill_Operative_BinarySystem_C:AbilityDescriptionOverride,,,"Shooting has a chance to throw a grenade without consuming ammo."
 
-// Schadenfreude → Scorched Earth
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row3/Skill_Schadenfreude/SkillName,Value,Scorched Earth
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row3/Skill_Schadenfreude/SkillDescription,Value,Causes your grenades to explode with fiery effects.
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row3/Skill_Schadenfreude/SkillIcon,Value,/Game/PatchDLC/Event2/PlayerCharacters/Siren/Icons/Passive_Phasecast_2
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row3/Skill_Schadenfreude/Ability/Ability_FireDamage/ModifierValueFormula.Data.ConstantValue.Constant,Value,0.10 // 10% fire damage
+# --- Do or Die ➜ Old-U ---
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../StatusEffect_Operative_OldU,AttributeEffects.AttributeEffects[0].AttributeData,0,,/Game/GameData/Attributes/Grenade/Att_GrenadeDamage.Att_GrenadeDamage
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../PassiveSkill_Operative_OldU_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,Attribute,0,,/Game/GameData/Attributes/Grenade/Att_GrenadeDamage.Att_GrenadeDamage
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../PassiveSkill_Operative_OldU_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,FormatText,0,,"[skillbold]Grenade Damage:[/skillbold] $VALUE$%"
 
-// Boom. Enhance. → Onslaught
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row3/Skill_BoomEnhance/SkillName,Value,Onslaught
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row3/Skill_BoomEnhance/SkillDescription,Value,Increases your gun damage and movement speed after killing an enemy.
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row3/Skill_BoomEnhance/SkillIcon,Value,/Game/PatchDLC/Event2/PlayerCharacters/Siren/Icons/Passive_Phasecast/Passive_Phasecast_3
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row3/Skill_BoomEnhance/Ability/Ability_GunDamage/ModifierValueFormula.Data.ConstantValue.Constant,Value,0.15 // 15% gun damage boost after kill
-
-// Binary System → Duty Calls
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row3/Skill_BinarySystem/SkillName,Value,Duty Calls
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row3/Skill_BinarySystem/SkillDescription,Value,Increases fire rate and damage of your weapon.
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row3/Skill_BinarySystem/SkillIcon,Value,/Game/PatchDLC/Event2/PlayerCharacters/Siren/Icons/Phasecast/Passive_Phasecast_8
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row3/Skill_BinarySystem/Ability/Ability_FireRate/ModifierValueFormula.Data.ConstantValue.Constant,Value,0.08 // 8% fire rate boost
-
-// Which One's Real? → Crisis Management
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row4/Skill_WhichOnesReal/SkillName,Value,Crisis Management
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row4/Skill_WhichOnesReal/SkillDescription,Value,Boosts damage output when your shield is low.
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row4/Skill_WhichOnesReal/SkillIcon,Value,/Game/PatchDLC/Event2/PlayerCharacters/Siren/Icons/Passive_Phasecast/Passive_Phasecast_9
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row4/Skill_WhichOnesReal/Ability/Ability_DamageBoost/ModifierValueFormula.Data.ConstantValue.Constant,Value,0.20 // 20% damage boost
-
-// Supersonic Man → Metal Storm
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row4/Skill_SupersonicMan/SkillName,Value,Metal Storm
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row4/Skill_SupersonicMan/SkillDescription,Value,Boosts gun damage and reduces recoil after a kill.
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row4/Skill_SupersonicMan/SkillIcon,Value,/Game/PatchDLC/Event2/PlayerCharacters/Siren/Icons/Passive_Phasecast/Passive_Phasecast_10
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row4/Skill_SupersonicMan/Ability/Ability_GunDamage/ModifierValueFormula.Data.ConstantValue.Constant,Value,0.18 // 18% gun damage after kill
-
-// Double Barrel (Capstone) → Ranger (Capstone)
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row5/Skill_DoubleBarrel/SkillName,Value,Ranger
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row5/Skill_DoubleBarrel/SkillDescription,Value,Increases gun damage, accuracy, and reload speed.
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row5/Skill_DoubleBarrel/SkillIcon,Value,/Game/PatchDLC/Event2/PlayerCharacters/Siren/Icons/Phasecast/Passive_Phasecast_11
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row5/Skill_DoubleBarrel/Ability/Ability_GunDamage/ModifierValueFormula.Data.ConstantValue.Constant,Value,0.25 // 25% gun damage boost
-
-// Digi-Clone (Action Skill) → Sabre Turret (Action Skill)
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row5/Skill_DigiClone/SkillName,Value,Sabre Turret
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row5/Skill_DigiClone/SkillDescription,Value,Deploys a turret that deals explosive damage.
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row5/Skill_DigiClone/SkillIcon,Value,/Game/PatchDLC/Event2/PlayerCharacters/Siren/Icons/Passive_Phasecast/Passive_Phasecast_12
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/SkillTree/DA/Row5/Skill_DigiClone/Ability/Ability_SabreturretDamage/ModifierValueFormula.Data.ConstantValue.Constant,Value,0.20 // 20% turret damage
+# --- Double Up ➜ Ranger ---
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../PassiveSkill_Operative_Ranger_C:AbilityDescriptionOverride,,,"Your Digi-Clone now deals bonus shock damage and chains to an additional enemy."
