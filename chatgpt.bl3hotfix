@@ -1,36 +1,68 @@
+//////////////////////////////////////////////////////////////////
+// ZANE'S DOUBLED AGENT → AXTON'S GUNPOWDER TREE CONVERSION HOTFIX
+//////////////////////////////////////////////////////////////////
 
-# Zane Clone Tree ➜ Axton Gunpowder Tree Conversion
+// Tier 1: Synchronicity → Impact
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/Synchronicity/BPChar_Skill_Synchronicity.Default__BPChar_Skill_Synchronicity_C,SkillData,Skill_Impact
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/Synchronicity/DisplayName,Text,Impact
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/Synchronicity/Description,Text,Your shots deal increased gun damage.
 
-# --- Impact ➜ Donnybrook ---
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Donnybrook/StatusEffect_Operative_Donnybrook.StatusEffect_Operative_Donnybrook,AttributeEffects.AttributeEffects[1].AttributeData,0,,/Game/GameData/Attributes/Weapon/Att_WeaponDamage.Att_WeaponDamage
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Donnybrook/StatusEffect_Operative_Donnybrook.StatusEffect_Operative_Donnybrook,AttributeEffects.AttributeEffects[2].AttributeData,0,,/Game/GameData/Attributes/Combat/Att_MeleeDamage.Att_MeleeDamage
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Donnybrook/PassiveSkill_Operative_Donnybrook.PassiveSkill_Operative_Donnybrook_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,Attribute,0,,/Game/GameData/Attributes/Weapon/Att_WeaponDamage.Att_WeaponDamage
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Donnybrook/PassiveSkill_Operative_Donnybrook.PassiveSkill_Operative_Donnybrook_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,FormatText,0,,"[skillbold]Gun Damage:[/skillbold] $VALUE$%"
+// Tier 1: Praemunitus → Steady
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/Praemunitus/BPChar_Skill_Praemunitus.Default__BPChar_Skill_Praemunitus_C,SkillData,Skill_Steady
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/Praemunitus/DisplayName,Text,Steady
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/Praemunitus/Description,Text,Increases your weapon magazine size.
 
-# --- Expertise ➜ Fractal Frags ---
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/FractalFrags/StatusEffect_Operative_FractalFrags.StatusEffect_Operative_FractalFrags,AttributeEffects.AttributeEffects[0].AttributeData,0,,/Game/GameData/Attributes/Weapon/Att_WeaponReloadSpeed.Att_WeaponReloadSpeed
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/FractalFrags/StatusEffect_Operative_FractalFrags.StatusEffect_Operative_FractalFrags,AttributeEffects.AttributeEffects[1].AttributeData,0,,/Game/GameData/Attributes/Weapon/Att_WeaponSwapSpeed.Att_WeaponSwapSpeed
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/FractalFrags/PassiveSkill_Operative_FractalFrags.PassiveSkill_Operative_FractalFrags_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,Attribute,0,,/Game/GameData/Attributes/Weapon/Att_WeaponReloadSpeed.Att_WeaponReloadSpeed
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/FractalFrags/PassiveSkill_Operative_FractalFrags.PassiveSkill_Operative_FractalFrags_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,FormatText,0,,"[skillbold]Reload Speed:[/skillbold] $VALUE$%"
+// Tier 1: Donnybrook → Duty Calls
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/Donnybrook/BPChar_Skill_Donnybrook.Default__BPChar_Skill_Donnybrook_C,SkillData,Skill_DutyCalls
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/Donnybrook/DisplayName,Text,Duty Calls
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/Donnybrook/Description,Text,Fire rate and gun damage increase over time.
 
-# --- Phalanx Shield ➜ Digital Distribution ---
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../DigitalDistribution.StatusEffect_Operative_DigitalDistribution,AttributeEffects.AttributeEffects[0].AttributeData,0,,/Game/GameData/Attributes/Shield/Att_ShieldCapacity.Att_ShieldCapacity
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../PassiveSkill_Operative_DigitalDistribution_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,Attribute,0,,/Game/GameData/Attributes/Shield/Att_ShieldCapacity.Att_ShieldCapacity
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../PassiveSkill_Operative_DigitalDistribution_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,FormatText,0,,"[skillbold]Shield Capacity:[/skillbold] $VALUE$%"
+// Tier 2: Fractal Frags → Grenadier
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/FractalFrags/BPChar_Skill_FractalFrags.Default__BPChar_Skill_FractalFrags_C,SkillData,Skill_Grenadier
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/FractalFrags/DisplayName,Text,Grenadier
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/FractalFrags/Description,Text,Killing an enemy gives a chance to drop a free grenade.
 
-# --- Steady ➜ Quick Breather ---
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../QuickBreather.StatusEffect_Operative_QuickBreather,AttributeEffects.AttributeEffects[0].AttributeData,0,,/Game/GameData/Attributes/Weapon/Att_WeaponRecoilAttenuation.Att_WeaponRecoilAttenuation
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../QuickBreather.StatusEffect_Operative_QuickBreather,AttributeEffects.AttributeEffects[1].AttributeData,0,,/Game/GameData/Attributes/Grenade/Att_GrenadeDamage.Att_GrenadeDamage
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../PassiveSkill_Operative_QuickBreather_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,Attribute,0,,/Game/GameData/Attributes/Grenade/Att_GrenadeDamage.Att_GrenadeDamage
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../PassiveSkill_Operative_QuickBreather_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,FormatText,0,,"[skillbold]Grenade Damage:[/skillbold] $VALUE$%"
+// Tier 2: Duct Tape Mod → Battlefront
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/DuctTapeMod/BPChar_Skill_DuctTapeMod.Default__BPChar_Skill_DuctTapeMod_C,SkillData,Skill_Battlefront
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/DuctTapeMod/DisplayName,Text,Battlefront
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/DuctTapeMod/Description,Text,Grenade use boosts all damage temporarily.
 
-# --- Duct Tape Mod ➜ Binary System ---
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../PassiveSkill_Operative_BinarySystem_C:AbilityDescriptionOverride,,,"Shooting has a chance to throw a grenade without consuming ammo."
+// Tier 2: Quick Breather → Resourceful
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/QuickBreather/BPChar_Skill_QuickBreather.Default__BPChar_Skill_QuickBreather_C,SkillData,Skill_Resourceful
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/QuickBreather/DisplayName,Text,Resourceful
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/QuickBreather/Description,Text,Reduces cooldown on grenade-related actions.
 
-# --- Do or Die ➜ Old-U ---
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../StatusEffect_Operative_OldU,AttributeEffects.AttributeEffects[0].AttributeData,0,,/Game/GameData/Attributes/Grenade/Att_GrenadeDamage.Att_GrenadeDamage
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../PassiveSkill_Operative_OldU_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,Attribute,0,,/Game/GameData/Attributes/Grenade/Att_GrenadeDamage.Att_GrenadeDamage
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../PassiveSkill_Operative_OldU_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,FormatText,0,,"[skillbold]Grenade Damage:[/skillbold] $VALUE$%"
+// Tier 3: Binary System → Do or Die
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/BinarySystem/BPChar_Skill_BinarySystem.Default__BPChar_Skill_BinarySystem_C,SkillData,Skill_DoOrDie
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/BinarySystem/DisplayName,Text,Do or Die
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/BinarySystem/Description,Text,You can throw grenades while in FFYL and gain bonus explosive damage.
 
-# --- Double Up ➜ Ranger ---
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/.../PassiveSkill_Operative_Ranger_C:AbilityDescriptionOverride,,,"Your Digi-Clone now deals bonus shock damage and chains to an additional enemy."
+// Tier 3: Boom Enhance → Longbow Turret
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/BoomEnhance/BPChar_Skill_BoomEnhance.Default__BPChar_Skill_BoomEnhance_C,SkillData,Skill_LongbowTurret
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/BoomEnhance/DisplayName,Text,Longbow Turret
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/BoomEnhance/Description,Text,Clone is thrown as a longbow grenade and explodes on arrival.
+
+// Tier 3: Which One's Real → Nuke
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/WhichOnesReal/BPChar_Skill_WhichOnesReal.Default__BPChar_Skill_WhichOnesReal_C,SkillData,Skill_Nuke
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/WhichOnesReal/DisplayName,Text,Nuke
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/WhichOnesReal/Description,Text,Clone creates a massive explosion when deployed.
+
+// Tier 4: Supersonic Man → Ready for Action
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/SupersonicMan/BPChar_Skill_SupersonicMan.Default__BPChar_Skill_SupersonicMan_C,SkillData,Skill_ReadyForAction
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/SupersonicMan/DisplayName,Text,Ready for Action
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/SupersonicMan/Description,Text,Increases reload speed and shield recharge rate.
+
+// Tier 4: Digital Distribution → Laser Sight
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/DigitalDistribution/BPChar_Skill_DigitalDistribution.Default__BPChar_Skill_DigitalDistribution_C,SkillData,Skill_LaserSight
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/DigitalDistribution/DisplayName,Text,Laser Sight
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/DigitalDistribution/Description,Text,Increases weapon accuracy and critical hit bonus.
+
+// Tier 5: Schadenfreude → Ranger
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/Schadenfreude/BPChar_Skill_Schadenfreude.Default__BPChar_Skill_Schadenfreude_C,SkillData,Skill_Ranger
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/Schadenfreude/DisplayName,Text,Ranger
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/Schadenfreude/Description,Text,Increases weapon damage, reload speed, and movement speed.
+
+// Tier 6: Double Barrel → Sentry
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/DoubleBarrel/BPChar_Skill_DoubleBarrel.Default__BPChar_Skill_DoubleBarrel_C,SkillData,Skill_Sentry
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/DoubleBarrel/DisplayName,Text,Sentry
+SparkPatchEntry,(1,2,0),/Game/PlayerCharacters/Operative/Skills/DigiClone/DoubleBarrel/Description,Text,Clone acts as an automatic turret and lasts longer.
