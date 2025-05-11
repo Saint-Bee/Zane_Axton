@@ -7,7 +7,8 @@
 # ===== PASSIVE SKILLS ===== #
 
 # --- MULTITASKER ---
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/PassiveSkill_Operative_Multitasker.Default__PassiveSkill_Operative_Multitasker_C,AbilityDescription,0,,<font color="#F7D358">Level $LEVEL$:</font> Increases Gun Damage, Melee Damage, and Cooldown Rate per active skill (Max 5 stacks).
+SparkPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/PassiveSkill_Operative_Multitasker.Default__PassiveSkill_Operative_Multitasker_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,FormatText,0,,[skillbold]Increases Gun Damage, Melee Damage, and Cooldown Rate per active skill 
+:[/skillbold] $VALUE$ / perk
 SparkPatchEntry,(1,2,0,),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/MultiTasker/StatusEffect_Operative_Multitasker.StatusEffect_Operative_Multitasker,AttributeEffects,0,,((AttributeData=GbxAttributeData'"/Game/GameData/Attributes/Att_WeaponDamageMultiplier.Att_WeaponDamageMultiplier"',ModifierType=Additive,BaseModifierValue=(BaseValueConstant=0.12,BaseValueAttribute=None,AttributeInitializer=None,BaseValueScale=0.60)),((AttributeData=GbxAttributeData'"/Game/GameData/Attributes/Att_MeleeDamageMultiplier.Att_MeleeDamageMultiplier"',ModifierType=Additive,BaseModifierValue=(BaseValueConstant=0.12,BaseValueAttribute=None,AttributeInitializer=None,BaseValueScale=0.60)),((AttributeData=GbxAttributeData'"/Game/GameData/Attributes/Att_ActionSkillCooldownRate.Att_ActionSkillCooldownRate"',ModifierType=Additive,BaseModifierValue=(BaseValueConstant=0.03,BaseValueAttribute=None,AttributeInitializer=None,BaseValueScale=0.15)))
 
 # --- PRAEMUNITUS ---
@@ -23,3 +24,13 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/D
 # --- POCKET FULL OF GRENADES (Kill Skill Scaling) ---
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/Design/Passives/CloneTree/PocketFullOfGrenades/PassiveSkill_Operative_PocketFullOfGrenades.Default__PassiveSkill_Operative_PocketFullOfGrenades_C,AbilityDescription,0,,[skillbold]Kill Skill[/skillbold]. After killing an enemy, Zane gains [skillbold]Grenade Regeneration[/skillbold] and [skillbold]Grenade Damage[/skillbold]. This effect stacks twice.
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/Design/Passives/CloneTree/PocketFullOfGrenades/StatusEffect_Operative_PocketFullOfGrenades.StatusEffect_Operative_PocketFullOfGrenades,AttributeEffects,0,,((AttributeData=/Game/GameData/Attributes/DamageMultipliers/Att_DamageSourceInstigatorMultiplier_Grenade.Att_DamageSourceInstigatorMultiplier_Grenade,ModifierType=Scale,BaseModifierValue=(BaseValueConstant=0.0,BaseValueAttribute=None,AttributeInitializer=None,BaseValueScale=1.0)))
+
+
+
+
+
+
+# Donnybrook - Change the health regeneration from missing health to total health.
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Donnybrook/StatusEffect_Operative_Donnybrook.StatusEffect_Operative_Donnybrook,AttributeEffects.AttributeEffects[1].AttributeData,0,,/Game/GameData/Attributes/Health/Att_HealthPassivePercentRegenerationRate.Att_HealthPassivePercentRegenerationRate
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Donnybrook/PassiveSkill_Operative_Donnybrook.Default__PassiveSkill_Operative_Donnybrook_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,Attribute,0,,/Game/GameData/Attributes/Health/Att_HealthPassivePercentRegenerationRate.Att_HealthPassivePercentRegenerationRate
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Operative/_Shared/_Design/Passives/CloneTree/Donnybrook/PassiveSkill_Operative_Donnybrook.Default__PassiveSkill_Operative_Donnybrook_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute_0,FormatText,0,,[skillbold]Max Health Regeneration:[/skillbold] $VALUE$ / sec
